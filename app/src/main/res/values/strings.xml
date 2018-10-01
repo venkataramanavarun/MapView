@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MapView</string>
+
+    <string name="google_api">AIzaSyDrkp6OZQZdOhULbXwHuTdwrE7mianiQTg</string>
+</resources>

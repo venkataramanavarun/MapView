@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/location_LLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/from_location_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="10dp"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/from_location_imageVIew"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                        android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                        android:padding="2dp"
+                        android:src="@drawable/location_on_black" />
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/from_location_horizentalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/edit_from_location_imageVIew"
+                        android:layout_toRightOf="@+id/from_location_imageVIew"
+                        android:background="@drawable/borderrounded"
+                        android:fillViewport="true"
+                        android:paddingRight="10dp"
+                        android:scrollbars="none">
+
+                        <EditText
+                            android:id="@+id/from_lcation_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:focusableInTouchMode="false"
+                            android:gravity="left|center"
+                            android:hint="pick up location"
+                            android:maxLines="1"
+                            android:paddingLeft="10dp"
+
+                            android:scrollbars="horizontal"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="14sp" />
+                    </HorizontalScrollView>
+
+
+                    <ImageView
+                        android:id="@+id/lock_from_location_imageVIew"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/from_location_horizentalScrollView"
+
+                        android:padding="1dp"
+                        android:src="@drawable/unlock"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/edit_from_location_imageVIew"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                        android:background="#88ffffff"
+                        android:padding="18dp"
+                        android:src="@drawable/edit"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/to_location_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.1dp"
+
+                    android:elevation="10dp"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/to_location_imageVIew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                        android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                        android:paddingLeft="17dp"
+                        android:paddingRight="16dp"
+                        android:src="@drawable/ic_circle" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/to_location_horizentalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/edit_to_location_imageVIew"
+                        android:layout_toRightOf="@+id/to_location_imageVIew"
+                        android:background="@drawable/borderrounded"
+                        android:fillViewport="true"
+                        android:paddingRight="10dp"
+                        android:scrollbars="none">
+
+                        <EditText
+                            android:id="@+id/to_lcation_textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:focusableInTouchMode="false"
+                            android:gravity="left|center"
+                            android:hint="Destination location"
+                            android:maxLines="1"
+                            android:paddingLeft="10dp"
+                            android:scrollbars="horizontal"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="14sp" />
+
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/lock_to_location_imageVIew"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                        android:background="#ffffff"
+                        android:padding="1dp"
+                        android:src="@drawable/unlock"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/edit_to_location_imageVIew"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                        android:background="#ffffff"
+                        android:padding="18dp"
+                        android:src="@drawable/edit"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_below="@+id/location_LLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/includeLayout"
+        />
+
+</LinearLayout>
+
